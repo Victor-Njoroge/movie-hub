@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body{
+    background: #fff;
+}
+section{
+    padding: 2rem 9%;
+}
+.heading{
+    margin-top: 1rem;
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: black;
+}
+.heading span{
+    background: red;
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 9%;
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.185);
+}
+.nav-active{
+    background: black;
+
+}
+.header .fa-bars{
+    color: black;
+    font-size: 3rem;
+    margin-right: -2rem;
+
+}
+.nav-active .fa-bars{
+    color: #fff;
+ }
+ .header .leftHeader .logo img{
+    width: 6rem;
+    margin-top: .8rem;
+    margin-left: -10rem;
+ }
+ .header p{
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: -3.5px;
+    margin-left: -5rem;
+ }
+ .nav-active p{
+    color: #fff;
+ }
+ .header nav{
+    margin-left: -1rem;
+ }
+ .header nav a{
+    color: black;
+    font-size: 1.5rem;
+    padding: 0 .8rem;
+ }
+
+ .nav-active nav a{
+    color: #fff;
+ }
+ .header nav a:hover{
+    text-decoration: underline ;
+    color: red;
+ }
+.header .search-form{
+    width: 40rem;
+    height: 4rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    box-shadow:0px .5rem 1.5rem rgba(128, 128, 128, 0.264);
+    margin-left: -1rem;
+}
+.header .search-form .input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    transform: none;
+    font-size: 1.6rem;
+    color: black;
+    padding: 0 1.5rem;
+}
+
+.header .search-form .btn{
+    font-size: 2.2rem;
+    width: 6rem;
+    margin-left: 8rem;
+    cursor: pointer;
+    color: black;
+}
+.header .mic{
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header .user{
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+   
+}
+.header .shopping-cart{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    width: 41rem;
+    height: 50vh;
+    background: #fff;
+    overflow-y: scroll;
+    scroll-behavior: inherit;
+}
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: .3s linear;
+}
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+.header .shopping-cart .box img{
+    width: 13rem;
+}
+.header .shopping-cart .box .content h3{
+    font-size: 1.3rem;
+}
+.header .shopping-cart .box .content span{
+    font-size: 1.3rem;
+}
+
+.header .shopping-cart .box .content span{
+   color: black;
+}
+.header .shopping-cart .box .content button{
+     margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.3rem;
+    background: white;
+    color: red;
+    border: 1px solid red;
+    cursor: pointer;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10rem;
+
+}
+.home div video{
+    width: 100%;
+    height: 100%;
+}
+.more div h2{
+    color: #fff;
+    position: absolute;
+    top: 35rem;
+    margin-left: 3rem;
+    font-size: 5rem;
+    font-weight: bold;
+    width: 60rem;
+}
+.more div p{
+    position: absolute;
+    top: 42rem;
+    margin-left: 4rem;
+    font-size: 1.5rem;
+    width: 40rem;
+    color: white;
+}
+.industry{
+    margin-top: 14rem;
+    font-size: 1rem !important;
+}
+.IMD{
+    background: yellow;
+    color: black;
+    position: absolute;
+    top: 58rem;
+    margin-left: 4rem;
+}
+
+.moviefeatures .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.moviefeatures .box-container .box2{
+    display: none;
+    padding: 3rem 2rem;
+    background: #fff;
+    outline: .1rem solid rgba(0, 0, 0, .1);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+.moviefeatures .box-container .box2 img{
+    width: 20rem;
+    margin: 1rem 0;
+}
+.moviefeatures .box-container .box2 h3{
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: black;
+}
+.moviefeatures .box-container .box2 p{
+    font-size: 1rem;
+    list-style: 1.8;
+    color: rgba(128, 128, 128, 0.606);
+    padding: 1rem 0;
+}
+
+.moviefeatures .box-container .box2 button{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.3rem;
+    background: white;
+    color: red;
+    border: 1px solid red;
+    cursor: pointer;
+}
+.movie .top{
+   margin-top: -100rem;
+   margin-left: 30rem;
+}
+
+.movie .top .videoCon{
+    width: 60rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    
+    
+}
+.remove{
+    display: inline-block;
+    margin-left: 1rem;
+}
+.movie .top .videoCon .box2{
+   
+    display: none;
+    z-index: 100;
+   
+   
+}
+.movie .top .videoCon video{
+    width: 100%;
+    height: 100%;
+  
+}
+.movie .videoCon .box2{
+    padding: 3rem 2rem;
+    background: #fff;
+    outline: .1rem solid rgba(0, 0, 0, .1);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+.movie .videoCon .box2 img{
+    width: 20rem;
+}
+
+.movie .box-Container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.movie .box-Container .box2{
+    padding: 3rem 2rem;
+    background: #fff;
+    outline: .1rem solid rgba(0, 0, 0, .1);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+.movie .box-Container .box2 img{
+    width: 20rem;
+    margin: 1rem 0;
+}
+.movie .box-Container .box2 h3{
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: black;
+}
+.movie .box-Container .box2 p{
+    font-size: 1rem;
+    list-style: 1.8;
+    color: rgba(128, 128, 128, 0.606);
+    padding: 1rem 0;
+}
+
+.movie .box-Container .box2 button{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.3rem;
+    background: white;
+    color: red;
+    border: 1px solid red;
+    cursor: pointer;
+}
