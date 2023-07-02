@@ -267,6 +267,9 @@ section{
     border: 1px solid red;
     cursor: pointer;
 }
+.delete{
+    margin-left: 1rem;
+}
 .movie .top{
    margin-top: -100rem;
    margin-left: 30rem;

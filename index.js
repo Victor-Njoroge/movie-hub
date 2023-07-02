@@ -66,10 +66,41 @@ const theatre =(film)=>{
     <p>tickets sold <span class="sold">${film.tickets_sold}</span>  </p>
     <p> Theatre capacity <span class="capacity">${film.capacity}</span> </p>
     <button class="purchase">Buy Now</button>
-   
-
+    <button class="delete"><i class="fas fa-trash"></i>
     `
     document.querySelector(".box-container").appendChild(card)
+
+
+
+   
+  
+
+
+        function Delete(){
+
+            card.querySelector(".delete").addEventListener("click", ()=>{
+                card.remove() 
+                
+            fetch(` http://localhost:3000/films/${film.id}`,{
+             method:"DELETE",
+             headers:{
+                 'Content-Type': 'application/json',
+             }
+            })
+            .then(res => res.json())
+            .then(films => console.log(films))
+            })
+        }
+     
+        Delete()
+
+
+
+
+
+
+
+
 
 
 function UpDate(){
@@ -79,7 +110,7 @@ function UpDate(){
         film.capacity-=1
 
 
-        if(film.capacity ==0){
+        if(film.capacity <=0){
             film.tickets_sold="Sold out"
         }
 
@@ -183,3 +214,5 @@ const getData=()=>{
 }
 
 getData();
+
+
